@@ -13,7 +13,7 @@ class Perso{
 			if(8 > Math.round(Math.random()*10)){
 				resultat += this.nom + ' a loupé son attaque contre ' + cible.nom + '<br>';
 			} else {
-				resultat += this.nom + ' a frappé ' + cible.non + '<br>';
+				resultat += this.nom + ' a frappé ' + cible.nom + '<br>';
 				cible.sante -= this.puissance;
 			}
 			if(9 > Math.round(Math.random() * 10)){
