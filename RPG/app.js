@@ -11,5 +11,13 @@ document.addEventListener('DOMContentLoaded',function() {
 		valentin = new Perso('Valentin');
 		resume.innerHTML = '<p>' + malik.histoire() + '</p>';
 		resume.innerHTML = '<p>' + valentin.histoire() + '</p>' + resume.innerHTML;
-	});
+        attaque.disabled = false; // Activation du bouton "attaque"
+    });
+
+    attaque.addEventListener('click', function() {
+        if (malik && valentin) {
+            resume.innerHTML += malik.patate(valentin);
+            resume.innerHTML += valentin.patate(malik);
+        }
+    });
 });
