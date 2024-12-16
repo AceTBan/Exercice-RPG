@@ -24,7 +24,22 @@ document.addEventListener('DOMContentLoaded',function() {
             if (malik.sante <= 0 || valentin.sante <= 0) {
                 attaque.disabled = true; // Désactivation du bouton "attaque" lorsque le combat est terminé
                 resume.innerHTML += '<p>Le combat est terminé !</p>';
+                showWinner();
             }
         }
     });
+    function showWinner() { 
+        let winner; 
+        if (malik.sante > 0) { 
+            winner = 'Malik'; } 
+            else if (valentin.sante > 0) { 
+                winner = 'Valentin'; } 
+                else { winner = 'Aucun des deux !'; 
+            } 
+            setTimeout(function() { 
+                if (confirm(winner + ' a gagné ! Voulez-vous rejouer ?')) { 
+                    lancer.click(); 
+                } 
+            }, 100); // Ajout d'un léger délai pour que le texte final s'affiche avant le pop-up 
+        } 
 });
