@@ -42,4 +42,6 @@ document.addEventListener('DOMContentLoaded',function() {
                 } 
             }, 100); // Ajout d'un léger délai pour que le texte final s'affiche avant le pop-up 
         } 
+// Ajouter un message de bienvenue en bas de page 
+resume.innerHTML += '<p>Bienvenue dans le jeu de combat ! Appuyez sur "Lancer" pour commencer.</p>';
 });
